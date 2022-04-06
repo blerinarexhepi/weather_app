@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="Back_button" data-name="Back button" transform="translate(-19 -43)">
+    <path id="Path_2172" data-name="Path 2172" d="M23,0A23,23,0,1,1,0,23,23,23,0,0,1,23,0Z" transform="translate(19 43)" fill="#fff" opacity="0.9"/>
+    <g id="logout" transform="translate(39.316 74.459) rotate(180)">
+      <g id="Group_862" data-name="Group 862" transform="translate(-14.684 4.172)">
+        <g id="Group_861" data-name="Group 861">
+          <path id="Path_800" data-name="Path 800" d="M173.9,111.336l-4.033-3.98a.663.663,0,0,0-.931.945l2.882,2.844H150.763a.663.663,0,0,0,0,1.327H171.82l-2.882,2.844a.663.663,0,1,0,.931.945l4.033-3.98a.663.663,0,0,0,0-.945Z" transform="translate(-150.1 -107.165)" fill="#1a1824"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
