@@ -24,11 +24,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\bl
 	android:name
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
-MERGED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
+INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
+MERGED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
 MERGED from [:permission_handler_android] C:\Users\bleri\Desktop\flutter\weather_app\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] C:\Users\bleri\Desktop\flutter\weather_app\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\bleri\.gradle\caches\transforms-2\files-2.1\ad201fac15a88598107ec645f351f5b4\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
@@ -62,14 +62,22 @@ INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\debug\A
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\debug\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:1-36:12
 		INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:34:5-79
+	android:name
+		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:34:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:35:5-81
+	android:name
+		ADDED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml:35:22-78
 uses-sdk
 INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\bleri\Desktop\flutter\weather_app\android\app\src\main\AndroidManifest.xml
