@@ -1,10 +1,12 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../../core/controllers/circle_button.dart';
 
-import '../../utils/enums.dart';
+import '../../core/controllers/circle_button.dart';
 import '../../utils/colors.dart';
+import '../../utils/enums.dart';
 
 class CostumCircleButton extends StatelessWidget {
   final double padding;
@@ -26,7 +28,7 @@ class CostumCircleButton extends StatelessWidget {
         return ElevatedButton(
           child: controller.getIcon(iconType),
           onPressed: () {
-            controller.getOnPressedFunction(iconType);
+            onTap ?? controller.getOnPressedFunction(iconType);
             HapticFeedback.lightImpact();
           },
           style: ElevatedButton.styleFrom(

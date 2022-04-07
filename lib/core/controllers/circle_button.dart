@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:weather_app/views/pages/settings.dart';
 
 import '../../utils/enums.dart';
 import '../../utils/functions/location.dart';
+import '../../views/pages/settings.dart';
+import 'search.dart';
 
 class CircleButton extends GetxController {
   final CostumCircleButtonEnum icon;
@@ -30,29 +32,24 @@ class CircleButton extends GetxController {
     }
   }
 
-  void getOnPressedFunction(CostumCircleButtonEnum icon) {
+  Future<void> getOnPressedFunction(CostumCircleButtonEnum icon) async {
     switch (icon) {
       case CostumCircleButtonEnum.settings_icon:
-        Get.to(() => SettingsPage());
-
-        return;
+        return Get.to(() => SettingsPage());
 
       case CostumCircleButtonEnum.back_icon:
-        Get.back();
-        return;
-
-      // case CostumCircleButtonEnum.close_icon:
-      //   if (Get.currentRoute.contains('/searchHistory') ||
-      //       (Get.currentRoute == '/filter' &&
-      //           Get.find<FilterController>().filtered.isEmpty))
-      //     Get
-      //       ..find<FilterController>().clearFilters()
-      //       ..back();
-      //   Get.back();
-      //   return;
+        return Get.back();
 
       case CostumCircleButtonEnum.location_icon:
-        determinePosition();
+        Position position = await determinePosition();
+        if (position != null) {
+          Get.find<SearchController>().searchCity(
+            currentLocation: true,
+            lat: position.latitude.toString(),
+            lon: position.longitude.toString(),
+          );
+        }
+
         return;
 
       default:

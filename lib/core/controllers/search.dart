@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:weather_app/core/models/weather.dart';
-import 'package:weather_app/views/pages/home.dart';
-import 'package:weather_app/views/pages/settings.dart';
 
+import '../../views/pages/home.dart';
+import '../models/weather.dart';
 import '../services/weather.dart';
 
 class SearchController extends GetxController {
@@ -13,21 +12,24 @@ class SearchController extends GetxController {
 
   TextEditingController searchController = TextEditingController();
 
-  void searchCity() async {
+  void searchCity(
+      {bool currentLocation = false, String? lat, String? lon}) async {
     try {
       bool newCity = false;
-      city = await WeatherServices().getWeather(searchController.text);
+      city = await WeatherServices().getWeather(
+        currentLocation: currentLocation,
+        city: searchController.text,
+        lat: lat,
+        lon: lon,
+      );
 
-      print(cities.contains(city.cityName));
-      if (cities.contains(city.cityName))
-        newCity = false;
-      else
-        newCity = true;
+//fix this
+      newCity = !cities.contains(city);
 
-      if (cities.isEmpty || newCity) cities.add(city);
-
-      cities.refresh();
-      print(cities.length);
+      if (cities.isEmpty || newCity) {
+        cities.add(city);
+        cities.reversed;
+      }
 
       update();
 

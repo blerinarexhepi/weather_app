@@ -4,7 +4,10 @@ import 'package:permission_handler/permission_handler.dart';
 
 class HomeController extends GetxController {
   int currentPage = 0;
-  Position? position;
+  late String _currentAddress;
+  late Position _currentPosition;
+
+  late Position position;
 
   // String img;
 
@@ -14,19 +17,41 @@ class HomeController extends GetxController {
 
   @override
   void onInit() {
-    setPosition();
+    // setPosition();
 
     super.onInit();
   }
 
-  void setPosition({Position? newPosition}) async {
-    if (newPosition != null)
-      position = newPosition;
-    else if (await Permission.location.isGranted)
-      position = await Geolocator.getCurrentPosition();
-    else
-      position = null;
+  // void setPosition({Position? newPosition}) async {
+  //   if (newPosition != null) {
+  //     position = newPosition;
+  //   } else if (await Permission.location.isGranted) {
+  //     position = await Geolocator.getCurrentPosition();
+  //   } else {
+  //     position = null;
+  //   }
 
-    update();
+  //   update();
+  // }
+
+  Position getCurrentLocation() {
+    try {
+      position =
+          Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
+              .then((Position position) {
+        _currentPosition = position;
+        // _getAddressFromLatLng();
+      }) as Position;
+
+      print(position);
+
+      update();
+
+      return position;
+    } catch (e) {
+      print(e);
+
+      return position;
+    }
   }
 }
