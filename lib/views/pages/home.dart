@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/controllers/search.dart';
-import '../widgets/searchBar.dart';
+import '../../utils/colors.dart';
+import '../widgets/search_bar.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomePage extends StatelessWidget {
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
             width: double.infinity,
           ),
           Container(
-            color: Colors.black38,
+            color: AppColors.black38,
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),

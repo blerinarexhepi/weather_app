@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:weather_app/utils/colors.dart';
 
 class Temperature extends StatelessWidget {
   final double temp;
@@ -23,14 +24,13 @@ class Temperature extends StatelessWidget {
           '${temp.round()}\u2103',
           style: const TextStyle(
             fontSize: 50,
-            color: Colors.white,
+            color: AppColors.white,
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SvgPicture.asset(
-              // 'assets/icons/rain.svg',
               'assets/icons/${weatherType.toLowerCase()}.svg',
               width: 45,
             ),
@@ -38,7 +38,7 @@ class Temperature extends StatelessWidget {
               'Today: $weatherType. Feels like: ${feelsLikeTemp.round()}\u2103',
               style: const TextStyle(
                 fontSize: 15,
-                color: Colors.white,
+                color: AppColors.white,
               ),
             ),
           ],

@@ -24,19 +24,14 @@ class SearchBar extends StatelessWidget {
             init: SearchController(),
             builder: (controller) {
               return TextFormField(
-                controller: controller.searchController
-                  ..addListener(
-                    () => controller
-                        .hasValue(controller.searchController.text.length > 2),
-                  ),
                 textCapitalization: TextCapitalization.sentences,
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: AppColors.white,
                   fontWeight: FontWeight.w400,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Search your city',
                   isDense: true,
+                  hintText: 'Search your city',
                   contentPadding: const EdgeInsets.only(
                     left: 10,
                     top: 11,
@@ -44,23 +39,23 @@ class SearchBar extends StatelessWidget {
                   ),
                   hintStyle: const TextStyle(
                     fontSize: 17,
-                    fontWeight: FontWeight.w200,
                     color: AppColors.grey4,
+                    fontWeight: FontWeight.w200,
                     fontStyle: FontStyle.italic,
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: BorderSide(color: AppColors.white),
                   ),
                   enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
-                      color: Colors.white,
+                      color: AppColors.white,
                     ),
                   ),
                   suffixIcon: IconButton(
                     onPressed: () => controller.searchCity(),
                     icon: const Icon(
                       Icons.search,
-                      color: Colors.white,
+                      color: AppColors.white,
                     ),
                   ),
                 ),

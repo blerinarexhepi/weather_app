@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/models/city_weather.dart';
+import '../../utils/colors.dart';
 
 class CityWeather extends StatelessWidget {
   final CityWeatherModel city;
@@ -14,16 +15,6 @@ class CityWeather extends StatelessWidget {
       children: [
         GestureDetector(
           behavior: HitTestBehavior.translucent,
-          // onTap: () => Get.to(
-          //   () => (HomePage()),
-          // ),
-          // decoration: const BoxDecoration(
-          //   image: DecorationImage(
-          //     image: AssetImage("assets/snow.jpg"),
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
-          // padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Row(
@@ -40,7 +31,7 @@ class CityWeather extends StatelessWidget {
                     Text(
                       city.cityName,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 20,
                       ),
                     ),
@@ -49,7 +40,7 @@ class CityWeather extends StatelessWidget {
                 Text(
                   '${city.temperature.round()}\u2103',
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: AppColors.white,
                     fontSize: 30,
                   ),
                 ),
@@ -60,7 +51,7 @@ class CityWeather extends StatelessWidget {
         const Divider(
           height: 0,
           thickness: 1,
-          color: Colors.white,
+          color: AppColors.white,
         )
       ],
     );

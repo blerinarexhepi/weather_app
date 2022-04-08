@@ -6,7 +6,7 @@ import 'package:weather_app/core/models/city_weather.dart';
 import 'package:weather_app/views/pages/single_location.dart';
 
 import '../../core/controllers/search.dart';
-import '../widgets/appBar.dart';
+import '../widgets/app_bar.dart';
 
 class AllLocations extends StatelessWidget {
   final int initialIndex;
@@ -25,7 +25,6 @@ class AllLocations extends StatelessWidget {
       ),
       body: GetBuilder<SearchController>(
         init: SearchController(),
-        initState: (_) {},
         builder: (controller) {
           return PageView(
             controller: _controller,

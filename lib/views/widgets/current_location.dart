@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../utils/colors.dart';
+
 class CurrentLocation extends StatelessWidget {
   final String currentLocation;
 
@@ -20,14 +22,14 @@ class CurrentLocation extends StatelessWidget {
             style: const TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: AppColors.white,
             ),
           ),
           Text(
             today,
             style: const TextStyle(
               fontSize: 15,
-              color: Colors.white,
+              color: AppColors.white,
             ),
           ),
         ],

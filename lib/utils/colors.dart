@@ -1,44 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color red = Color(0xffFF2650);
-  static const Color grey = Color(0xff707070);
-  static const Color grey1 = Color(0xffEFEFEF);
-  static const Color grey2 = Color(0xffEAEAEB);
-  static const Color grey3 = Color(0xffD0D0D2);
   static const Color grey4 = Color(0xff919099);
-  static const Color grey5 = Color(0xff242134);
-  static const Color green = Color(0xff92E0C6);
-  static const Color green2 = Color(0xffc5ede0);
-  static const Color green3 = Color(0xffA3DDC7);
-  static const Color black1 = Color(0xff1A1A1A);
-  static const Color black2 = Color(0xff1A1824);
-  static const Color white2 = Color(0xffD0D0D2);
-  static const Color purple = Color(0xff4E307A);
-  static const Color lightgrey = Color(0xff96959B);
   static const Color white = Color(0xffFFFFFF);
-  static const Color black = Color(0xff000000);
-  static const Color rajah = Color(0xffFFB660);
-  static const Color redPink = Color(0xffFDC5CE);
-  static const Color cardinal = Color(0xffC51934);
-  static const Color solitude = Color(0xffEAECEF);
-  static const Color greySuit = Color(0xff919099);
-  static const Color blueGrey = Color(0xff8899A7);
-  static const Color allports = Color(0xff1B7491);
-  static const Color lightGrey = Color(0xffE9EBF2);
-  static const Color linkWater = Color(0xffBEC2CE);
-  static const Color dodgerBlue = Color(0xff0078FC);
-  static const Color whiteLilac = Color(0xffECECEF);
-  static const Color greySantas = Color(0xff969AA8);
-  static const Color whiteSmoke = Color(0xffF6F6F6);
-  static const Color redRoseBud = Color(0xffFE9A99);
-  static const Color whiteCastle = Color(0xffF7F7F7);
-  static const Color blueFlaxseed = Color(0xff1E2432);
-  static const Color redPinkFlare = Color(0xffD6ACB1);
-  static const Color blueRegentSt = Color(0xffA0CAD8);
-  static const Color bluePelorous = Color(0xff1E81A1);
-  static const Color blueAllports = Color(0xff0F4050);
+  static const Color black38 = Color(0x61000000);
   static const Color redBrinkPink = Color(0xffFA6D83);
   static const Color blueLinkWater = Color(0xffCBD9E0);
-  static const Color blueShakespeare = Color(0xff62A7BE);
 }

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/models/city_weather.dart';
+import '../../utils/colors.dart';
 import '../widgets/current_location.dart';
 import '../widgets/temperature.dart';
 import '../widgets/weather_info.dart';
@@ -23,7 +24,7 @@ class SingleLocation extends StatelessWidget {
           width: double.infinity,
         ),
         Container(
-          color: Colors.black38,
+          color: AppColors.black38,
         ),
         Padding(
           padding: const EdgeInsets.all(20),

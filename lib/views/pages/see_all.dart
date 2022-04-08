@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/controllers/search.dart';
+import '../../utils/colors.dart';
 import '../widgets/city_wheather.dart';
 import 'locations.dart';
 
-class SettingsPage extends StatelessWidget {
+class SeeAllPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(SearchController());
@@ -26,7 +27,7 @@ class SettingsPage extends StatelessWidget {
                 width: double.infinity,
               ),
               Container(
-                color: Colors.black38,
+                color: AppColors.black38,
               ),
               SingleChildScrollView(
                 child: Column(
@@ -34,7 +35,7 @@ class SettingsPage extends StatelessWidget {
                   children: [
                     BackButton(
                       onPressed: Get.back,
-                      color: Colors.white,
+                      color: AppColors.white,
                     ),
                     for (int i = 0; i < _controller.cities.length; i++)
                       GestureDetector(

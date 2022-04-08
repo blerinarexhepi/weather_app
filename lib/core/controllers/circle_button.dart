@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 import '../../utils/enums.dart';
 import '../../utils/functions/location.dart';
-import '../../views/pages/settings.dart';
+import '../../views/pages/see_all.dart';
 import 'search.dart';
 
 class CircleButton extends GetxController {
@@ -15,30 +15,21 @@ class CircleButton extends GetxController {
 
   Widget getIcon(CostumCircleButtonEnum icon) {
     switch (icon) {
-      case CostumCircleButtonEnum.back_icon:
-        return SvgPicture.asset('assets/icons/back-arrow.svg');
-
-      case CostumCircleButtonEnum.close_icon:
-        return SvgPicture.asset('assets/icons/close.svg');
+      case CostumCircleButtonEnum.settings_icon:
+        return SvgPicture.asset('assets/icons/settings.svg');
 
       case CostumCircleButtonEnum.location_icon:
         return SvgPicture.asset('assets/icons/location.svg');
 
-      case CostumCircleButtonEnum.settings_icon:
-        return SvgPicture.asset('assets/icons/settings.svg');
-
       default:
-        return SvgPicture.asset('assets/icons/settings.svg');
+        return SvgPicture.asset('assets/icons/back-arrow.svg');
     }
   }
 
   Future<void> getOnPressedFunction(CostumCircleButtonEnum icon) async {
     switch (icon) {
       case CostumCircleButtonEnum.settings_icon:
-        return Get.to(() => SettingsPage());
-
-      case CostumCircleButtonEnum.back_icon:
-        return Get.back();
+        return Get.to(() => SeeAllPage());
 
       case CostumCircleButtonEnum.location_icon:
         Position position = await determinePosition();
@@ -53,7 +44,7 @@ class CircleButton extends GetxController {
         return;
 
       default:
-        return; //TODO: Navigate to specific page
+        return Get.back();
     }
   }
 }

@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../utils/colors.dart';
+
 class WeatherInfo extends StatelessWidget {
   final int number;
   final String unit;
@@ -22,14 +24,14 @@ class WeatherInfo extends StatelessWidget {
           description.toUpperCase(),
           style: const TextStyle(
             fontSize: 10,
-            color: Colors.white,
+            color: AppColors.white,
           ),
         ),
         Text(
           '$number$unit',
           style: const TextStyle(
             fontSize: 25,
-            color: Colors.white,
+            color: AppColors.white,
           ),
         ),
       ],
