@@ -16,7 +16,7 @@ class CircleButton extends GetxController {
   Widget getIcon(CostumCircleButtonEnum icon) {
     switch (icon) {
       case CostumCircleButtonEnum.back_icon:
-        return SvgPicture.asset('assets/icons/logout.svg');
+        return SvgPicture.asset('assets/icons/back-arrow.svg');
 
       case CostumCircleButtonEnum.close_icon:
         return SvgPicture.asset('assets/icons/close.svg');

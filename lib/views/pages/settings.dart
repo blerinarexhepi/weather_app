@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../core/controllers/search.dart';
 import '../widgets/city_wheather.dart';
+import 'locations.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class SettingsPage extends StatelessWidget {
           () => Stack(
             children: [
               Image.asset(
-                'assets/images/blur.jpg',
+                'assets/images/blurred_snow.jpg',
                 fit: BoxFit.cover,
                 height: double.infinity,
                 width: double.infinity,
@@ -35,10 +36,14 @@ class SettingsPage extends StatelessWidget {
                       onPressed: Get.back,
                       color: Colors.white,
                     ),
-                    for (final city in _controller.cities)
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
-                        child: CityWeather(city: city),
+                    for (int i = 0; i < _controller.cities.length; i++)
+                      GestureDetector(
+                        behavior: HitTestBehavior.translucent,
+                        onTap: () => Get.to(() => AllLocations(i)),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 5),
+                          child: CityWeather(city: _controller.cities[i]),
+                        ),
                       ),
                   ],
                 ),

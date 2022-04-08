@@ -7,8 +7,7 @@ class SliderDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(microseconds: 150),
+    return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: 5,
       ),

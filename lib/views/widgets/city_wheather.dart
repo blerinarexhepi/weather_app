@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
-import '../../core/models/weather.dart';
-import '../pages/home.dart';
+import '../../core/models/city_weather.dart';
 
 class CityWeather extends StatelessWidget {
-  final Weather city;
+  final CityWeatherModel city;
 
   CityWeather({required this.city});
 
@@ -35,10 +33,9 @@ class CityWeather extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SvgPicture.asset(
-                      'assets/icons/sunny.svg',
+                      'assets/icons/${city.type.toLowerCase()}.svg',
                       fit: BoxFit.scaleDown,
                       width: 30,
-                      color: Colors.white,
                     ),
                     Text(
                       city.cityName,

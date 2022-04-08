@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import '../models/weather.dart';
+import '../models/city_weather.dart';
 
 class WeatherServices {
-  Future<Weather> getWeather({
+  Future<CityWeatherModel> getWeather({
     required bool currentLocation,
     String? city,
     String? lat,
@@ -34,6 +34,6 @@ class WeatherServices {
 
     final _res = jsonDecode(response.body);
 
-    return Weather.fromMap(_res);
+    return CityWeatherModel.fromMap(_res);
   }
 }

@@ -1,32 +1,34 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class WeatherInfo extends StatelessWidget {
+  final int number;
+  final String unit;
+  final String description;
+
   const WeatherInfo({
-    Key? key,
-  }) : super(key: key);
+    required this.unit,
+    required this.number,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
         Text(
-          'Wind',
-          style: TextStyle(
-            fontSize: 12,
+          description.toUpperCase(),
+          style: const TextStyle(
+            fontSize: 10,
             color: Colors.white,
           ),
         ),
         Text(
-          '10',
-          style: TextStyle(
-            fontSize: 15,
-            color: Colors.white,
-          ),
-        ),
-        Text(
-          'km/h',
-          style: TextStyle(
-            fontSize: 12,
+          '$number$unit',
+          style: const TextStyle(
+            fontSize: 25,
             color: Colors.white,
           ),
         ),

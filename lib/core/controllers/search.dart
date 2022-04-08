@@ -1,41 +1,44 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../views/pages/home.dart';
-import '../models/weather.dart';
+import '../../utils/functions/snackbars.dart';
+import '../../views/pages/locations.dart';
+import '../models/city_weather.dart';
 import '../services/weather.dart';
 
 class SearchController extends GetxController {
-  Weather city = Weather();
+  CityWeatherModel weatherCity = CityWeatherModel();
   RxBool hasValue = false.obs;
-  RxList<Weather> cities = <Weather>[].obs;
+  RxList<CityWeatherModel> cities = <CityWeatherModel>[].obs;
 
   TextEditingController searchController = TextEditingController();
 
   void searchCity(
       {bool currentLocation = false, String? lat, String? lon}) async {
     try {
-      bool newCity = false;
-      city = await WeatherServices().getWeather(
+      bool newCity = true;
+
+      weatherCity = await WeatherServices().getWeather(
         currentLocation: currentLocation,
         city: searchController.text,
         lat: lat,
         lon: lon,
       );
 
-//fix this
-      newCity = !cities.contains(city);
+      for (final city in cities) {
+        if (city.cityName == weatherCity.cityName) newCity = false;
+      }
 
       if (cities.isEmpty || newCity) {
-        cities.add(city);
-        cities.reversed;
+        cities.add(weatherCity);
       }
 
       update();
 
-      Get.to(() => HomePage());
+      searchController.clear();
+      Get.offAll(() => AllLocations(cities.length));
     } catch (e) {
-      print(e);
+      errorSnackbar(message: 'Please try again a different city!');
     }
   }
 }

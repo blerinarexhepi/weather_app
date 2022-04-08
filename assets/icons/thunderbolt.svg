@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="266.102" height="250.698" viewBox="0 0 266.102 250.698">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#c3c3c3"/>
+    </linearGradient>
+    <filter id="clouds" x="52" y="0" width="214.102" height="178" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff43e"/>
+      <stop offset="1" stop-color="#ffbc61"/>
+    </linearGradient>
+    <filter id="Path_1056" x="73.656" y="108.134" width="105.957" height="142.563" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#ffa133" flood-opacity="0.384"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-4" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="clouds-2" x="0" y="12" width="253.041" height="202" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur-3"/>
+      <feFlood flood-color="#fff" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_36" data-name="Group 36" transform="translate(-462 -177)">
+    <g id="Group_32" data-name="Group 32" transform="translate(408 -24)">
+      <g transform="matrix(1, 0, 0, 1, 54, 201)" filter="url(#clouds)">
+        <path id="clouds-3" data-name="clouds" d="M37.877,58q-.8,0-1.577-.077Q35.472,58,34.623,58H18.051a18.051,18.051,0,0,1-.122-36.1,24.86,24.86,0,0,1,49.261-.774A19.237,19.237,0,0,1,88.843,51.981,15.949,15.949,0,0,1,76.347,58Z" transform="translate(112 60)" fill="url(#linear-gradient)"/>
+      </g>
+      <path id="Subtraction_3" data-name="Subtraction 3" d="M42.95,58H40.069c.514,0,1.038-.029,1.558-.077.435.043.88.068,1.323.075ZM23.1,58H18.051a18.051,18.051,0,0,1-.122-36.1A24.86,24.86,0,0,1,42.612,0a25.243,25.243,0,0,1,2.663.141A24.842,24.842,0,0,0,23.256,21.9,18.051,18.051,0,0,0,23.1,58ZM72.518,21.124h0c-.071-.472-.157-.949-.256-1.417a19.482,19.482,0,0,1,5.269.008,19.1,19.1,0,0,0-5.012,1.41Z" transform="translate(166 261)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 462, 177)" filter="url(#Path_1056)">
+      <path id="Path_1056-2" data-name="Path 1056" d="M463.936,404.411c-3.137-6.482-13.677-26.289-17.977-35.283-1.236-2.837-7.425-6.266-8.154,3.356s-1.224,30.535-1.224,30.535H424.59s-6.076.087-4.743,5.726c3.224,5.423,13.648,28.876,19.826,37.547,2.333,2.811,6.816,4.128,9.314-1.581.175-9.429-.016-28.657-.016-28.657s4.084.187,10.88,0C465.861,415.81,467.073,410.893,463.936,404.411Z" transform="translate(569.27 576.83) rotate(180)" fill="url(#linear-gradient-3)"/>
+    </g>
+    <g id="Group_31" data-name="Group 31" transform="translate(356 -12)">
+      <g transform="matrix(1, 0, 0, 1, 106, 189)" filter="url(#clouds-2)">
+        <path id="clouds-4" data-name="clouds" d="M53.551,82q-1.129,0-2.23-.109Q50.15,82,48.949,82H25.52a25.52,25.52,0,0,1-.172-51.04,35.148,35.148,0,0,1,69.646-1.1,27.2,27.2,0,0,1,30.614,43.623A22.55,22.55,0,0,1,107.939,82Z" transform="translate(60 72)" fill="url(#linear-gradient-4)"/>
+      </g>
+      <path id="Subtraction_3-2" data-name="Subtraction 3" d="M60.78,82H56.6c.744,0,1.5-.04,2.249-.109.636.062,1.285.1,1.929.107ZM32.726,82H25.52a25.52,25.52,0,0,1-.172-51.04A35.111,35.111,0,0,1,60.245,0,35.691,35.691,0,0,1,64.01.2,35.125,35.125,0,0,0,32.879,30.96,25.52,25.52,0,0,0,32.726,82Zm69.8-52.136h0c-.1-.668-.222-1.342-.362-2a27.552,27.552,0,0,1,7.449.011,27.007,27.007,0,0,0-7.085,1.993Z" transform="translate(166 261)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
